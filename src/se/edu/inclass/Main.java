@@ -46,4 +46,10 @@ public class Main {
             }
         }
     }
+    public static void printDeadlinesSorted(ArrayList<Task> tasksData) {
+        tasksData.stream()
+                .filter((t) -> t instanceof Deadline)
+                .sorted(())
+                .forEach(System.out::println);
+    }
 }
